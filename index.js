@@ -8,6 +8,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use('/static', express.static(__dirname + '/views'));
 
 app.get('/api', function(req, res) {
+  console.log(req);
   res.json({data: "Hello World",id:guid.raw()});
 })
 
