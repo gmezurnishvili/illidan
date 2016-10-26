@@ -10,8 +10,8 @@ app.get('/api', function(req, res) {
   res.json({data: "Hello World"});
 })
 
-app.get('/view', function(req, res) {
-  res.render('index.html');
+app.get('/index', function(req, res) {
+  res.render('views/index.html');
 })
 
 app.listen(app.get('port'), function() {
