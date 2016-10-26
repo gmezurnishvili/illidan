@@ -4,9 +4,12 @@ var app = express()
 
 app.set('port', (process.env.PORT || 5000));
  
-app.get('/notes', function(req, res) {
-  console.log(req);
-  res.json({notes: "Hello World"});
+app.get('/api', function(req, res) {
+  res.json({data: "Hello World"});
+})
+
+app.get('/view', function(req, res) {
+  res.render('<b> Test </b>');
 })
 
 app.listen(app.get('port'), function() {
