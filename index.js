@@ -5,7 +5,8 @@ var app = express()
 app.set('port', (process.env.PORT || 5000));
  
 app.get('/notes', function(req, res) {
-  res.json({notes: "Hello World",request:req})
+  console.log(req);
+  res.json({notes: "Hello World"});
 })
 
 app.listen(app.get('port'), function() {
