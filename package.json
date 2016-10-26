@@ -11,11 +11,8 @@
   },
   "dependencies": {
     "ejs": "2.4.1",
-    "express": "4.13.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "express": "4.13.3",
+    "guid": "0.0.12"
   },
   "keywords": [
     "node",
