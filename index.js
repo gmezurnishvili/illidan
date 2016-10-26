@@ -9,7 +9,7 @@ app.get('/api', function(req, res) {
 })
 
 app.get('/view', function(req, res) {
-  res.write('<b> Test </b>');
+  res.render('views/index.html');
 })
 
 app.listen(app.get('port'), function() {
