@@ -1,9 +1,7 @@
 var express = require('express')
-var guidLib = require('guid')
+var guid = require('guid')
 
 var app = express()
-var guid=guidLib()
-
 
 app.set('port', (process.env.PORT || 5000));
 
