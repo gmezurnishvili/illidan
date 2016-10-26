@@ -11,7 +11,7 @@ app.get('/api', function(req, res) {
 })
 
 app.get('/index', function(req, res) {
-  res.sendFile('/index.html');
+  res.sendFile('/views/index.html');
 })
 
 app.listen(app.get('port'), function() {
