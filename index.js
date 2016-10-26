@@ -7,7 +7,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use('/static', express.static(__dirname + '/views'));
 
 app.get('/api', function(req, res) {
-  res.json({data: "Hello World",id:req});
+  res.json({data: "Hello World",id:"1"});
 })
 
 app.get('/index', function(req, res) {
