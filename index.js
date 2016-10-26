@@ -12,7 +12,7 @@ app.get('/api', function(req, res) {
 })
 
 app.get('/view', function(req, res) {
-  res.render('views/index');
+  res.render('index');
 })
 
 app.listen(app.get('port'), function() {
