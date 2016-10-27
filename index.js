@@ -1,7 +1,7 @@
 var express = require('express')
 var guid = require('guid')
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://gmezurnishvili:ASDasd123@ds055895.mlab.com:55895/doza');
+//mongoose.connect('mongodb://gmezurnishvili:ASDasd123@ds055895.mlab.com:55895/doza');
 
 var app = express()
 
