@@ -12,7 +12,8 @@
   "dependencies": {
     "ejs": "2.4.1",
     "express": "4.13.3",
-    "guid": "0.0.12"
+    "guid": "0.0.12",
+    "mongoose": "4.5.8"
   },
   "keywords": [
     "node",
