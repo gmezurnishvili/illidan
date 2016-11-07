@@ -65,8 +65,7 @@ app.get('/webhook', function(req, res) {
  *
  */
 app.post('/webhook', function (req, res) {
-	console.log("Request is ");
-		console.log(req);
+	console.log("Here is Request");
 		return;
   var data = req.body;
 
