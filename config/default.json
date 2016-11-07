@@ -1,6 +1,6 @@
 {
-    "appSecret": "secretKey",
+    "appSecret": "3430d8f0d6a82e49afb6e198901bd832",
     "pageAccessToken": "EAADGxUj6YA0BAFpcnyTPNz3gWPz5tk9t1PofpZCZBfTwMDTyRfwS78eMNSE900GZBdjUsyXnz3XTBKFWfW3pRuTlZAVwqELs2LLd08e3naeFjFPVrGvZC3OGEqg6c0d5Oxf2DKiZC85uZBVZAkmZAIkOyNjuLEsyLzVgYc7ZBFBWGusAZDZD",
     "validationToken": "mytoken123",
-    "serverURL": "https://illidan.herokuapp.com"
+    "serverURL": "https://illidan.herokuapp.com/webhook"
 }
