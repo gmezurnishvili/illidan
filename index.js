@@ -197,6 +197,7 @@ function sendTextMessage(recipientId, messageText) {
   };
 
   callSendAPI(messageData);
+  getSenderData(recipientId);
 }
  
 function callSendAPI(messageData) {
@@ -218,6 +219,21 @@ function callSendAPI(messageData) {
       console.log("Successfully called Send API for recipient %s", 
         recipientId);
       }
+    } else {
+      console.error("Failed calling Send API", response.statusCode, response.statusMessage, body.error);
+    }
+  });  
+}
+
+function getSenderData(recipientId) {
+  request({
+    uri: 'https://graph.facebook.com/v2.8/'+recipientId+'?access_token='+PAGE_ACCESS_TOKEN+'&fields=first_name',
+    method: 'GET',
+    
+  }, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      console.log(response);
+      console.log(body);
     } else {
       console.error("Failed calling Send API", response.statusCode, response.statusMessage, body.error);
     }
