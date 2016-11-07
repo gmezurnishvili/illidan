@@ -65,6 +65,7 @@ app.get('/webhook', function(req, res) {
  *
  */
 app.post('/webhook', function (req, res) {
+	console.log(req);
   var data = req.body;
 
   // Make sure this is a page subscription
@@ -151,9 +152,8 @@ function receivedMessage(event) {
     return;
   }
 
-  if (messageText) {
-	     sendTextMessage(senderID, messageText);
-	  } 
+     sendTextMessage(senderID, "Test Message");
+	  
 }
 
 /*
