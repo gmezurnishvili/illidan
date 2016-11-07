@@ -245,6 +245,7 @@ var uri = 'https://graph.facebook.com/v2.8/'+recipientId+'?access_token='+PAGE_A
     
   }, function (error, response, body) {
     if (!error && response.statusCode == 200) {
+		console.log(JSON.parse(body));
       callback(JSON.parse(body));
     } else {
       console.error("Failed calling Send API", response.statusCode, response.statusMessage, body.error);
