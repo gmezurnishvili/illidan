@@ -147,6 +147,7 @@ function receivedMessage(event) {
   var timeOfMessage = event.timestamp;
   var message = event.message;
 
+  console.log(event.sender);
   console.log("Received message for user %d and page %d at %d with message:", 
     senderID, recipientID, timeOfMessage);
   console.log(JSON.stringify(message));
@@ -175,7 +176,7 @@ function receivedMessage(event) {
     return;
   }
 
-     sendTextMessage(senderID, "Test Message");
+     sendTextMessage(senderID, "Hello");
 	  
 }
 
