@@ -196,8 +196,19 @@ function sendTextMessage(recipientId, messageText) {
     }
   };
 
-  callSendAPI(messageData);
-  getSenderData(recipientId);
+  getSenderData(recipientId,function (body){
+	 var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      text: messageText + " " +body.first_name,
+      metadata: "DEVELOPER_DEFINED_METADATA"
+    }
+  }  
+	  callSendAPI(messageData);
+	  
+  });
 }
  
 function callSendAPI(messageData) {
@@ -225,14 +236,16 @@ function callSendAPI(messageData) {
   });  
 }
 
-function getSenderData(recipientId) {
+function getSenderData(recipientId, callback) {
+
+var uri = 'https://graph.facebook.com/v2.8/'+recipientId+'?access_token='+PAGE_ACCESS_TOKEN+'&fields=first_name';
   request({
     uri: 'https://graph.facebook.com/v2.8/'+recipientId+'?access_token='+PAGE_ACCESS_TOKEN+'&fields=first_name',
     method: 'GET',
     
   }, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      console.log(body);
+      callback(JSON.parse(body));
     } else {
       console.error("Failed calling Send API", response.statusCode, response.statusMessage, body.error);
     }
@@ -242,7 +255,10 @@ function getSenderData(recipientId) {
 
 app.get('/api', function(req, res) {
 
-  res.json({data: "Hello World",id:guid.raw()});
+getSenderData('1233418726731256',function (body){
+	res.json({data: "Hello "+body.first_name,id:guid.raw()});
+});
+  
 })
 
 
