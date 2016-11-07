@@ -1,0 +1,6 @@
+{
+    "appSecret": "secretKey",
+    "pageAccessToken": "EAADGxUj6YA0BADKsFE0InSlQCfqr8asfYxr51YZCZAkNiZAiwZCtlyunGmZABBksDzDzWf7kQZA79nlcwMykUKMdjsPSEiCXzWWVeDVcnzJ1KpNfIrjwBqkB0mpgUtDDSY1wzcJJxhiITGaATlZBwuxZAJHJZBGD1IddeALZBMh92hFgZDZD",
+    "validationToken": "mytoken123",
+    "serverURL": "https://illidan.herokuapp.com"
+}
