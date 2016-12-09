@@ -1,0 +1,55 @@
+{
+    "products": [
+        {
+            "code": "consumer",
+            "name": "სამომხმარებლო",
+            "currency": [
+                "GEL",
+                "USD",
+                "EUR"
+            ],
+            "amountRange": {
+                "min": 200,
+                "max": 2000
+            },
+            "periodRange": {
+                "min": 3,
+                "max": 48
+            }
+        },
+        {
+            "code": "mortgage",
+            "name": "იპოთეკური",
+            "currency": [
+                "GEL",
+                "USD",
+                "EUR"
+            ],
+            "amountRange": {
+                "min": 200,
+                "max": 2000
+            },
+            "periodRange": {
+                "min": 3,
+                "max": 48
+            }
+        },
+        {
+            "code": "auto",
+            "name": "ავტომობილისთვის",
+            "currency": [
+                "GEL",
+                "USD",
+                "EUR"
+            ],
+            "amountRange": {
+                "min": 200,
+                "max": 2000
+            },
+            "periodRange": {
+                "min": 3,
+                "max": 48
+            }
+        }
+    ]
+}
